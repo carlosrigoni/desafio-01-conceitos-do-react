@@ -29,8 +29,7 @@ export function TaskList() {
 
   function handleToggleTaskCompletion(id: string) {
     const newTasks = tasks.map(task => task.id === id ? {
-      id: task.id,
-      title: task.title,
+      ...task,
       isComplete: !task.isComplete
     } : task)
 
